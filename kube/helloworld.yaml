@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello-world
+spec:
+  template:
+    metadata:
+      name: hello-world-pod
+    spec:
+      containers:
+      - name: hello-world
+        image: api:1
+      restartPolicy: Never
